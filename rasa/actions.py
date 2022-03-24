@@ -54,39 +54,39 @@ class ActionVideo(Action):
 
 # ......................................................................................
 
-class ValidateRestaurantForm(Action):
-    def name(self) -> Text:
-        return "user_details_form"
+# class ValidateRestaurantForm(Action):
+#     def name(self) -> Text:
+#         return "user_details_form"
 
-    def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
-    ) -> List[EventType]:
-        required_slots = ["name", "number"]
+#     def run(
+#         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+#     ) -> List[EventType]:
+#         required_slots = ["name", "number"]
 
-        for slot_name in required_slots:
-            if tracker.slots.get(slot_name) is None:
-                # The slot is not filled yet. Request the user to fill this slot next.
-                return [SlotSet("requested_slot", slot_name)]
+#         for slot_name in required_slots:
+#             if tracker.slots.get(slot_name) is None:
+#                 # The slot is not filled yet. Request the user to fill this slot next.
+#                 return [SlotSet("requested_slot", slot_name)]
 
-        # All slots are filled.
-        return [SlotSet("requested_slot", None)]
+#         # All slots are filled.
+#         return [SlotSet("requested_slot", None)]
 
-class ActionSubmit(Action):
-    def name(self) -> Text:
-        return "action_save_data"
+# class ActionSubmit(Action):
+#     def name(self) -> Text:
+#         return "action_save_data"
 
-    def run(
-        self,
-        dispatcher,
-        tracker: Tracker,
-        domain: "DomainDict",
-    ) -> List[Dict[Text, Any]]:
-        #  for showing the message ...
-        # dispatcher.utter_message(template="utter_details_thanks",
-        #                          Name=tracker.get_slot("name"),
-        #                          Mobile_number=tracker.get_slot("number"))
+#     def run(
+#         self,
+#         dispatcher,
+#         tracker: Tracker,
+#         domain: "DomainDict",
+#     ) -> List[Dict[Text, Any]]:
+#         #  for showing the message ...
+#         # dispatcher.utter_message(template="utter_details_thanks",
+#         #                          Name=tracker.get_slot("name"),
+#         #                          Mobile_number=tracker.get_slot("number"))
 
-        DataUpdate(tracker.get_slot("name"),tracker.get_slot("number"))
-        dispatcher.utter_message("Thanks Now you can ask your question ....!")
+#         DataUpdate(tracker.get_slot("name"),tracker.get_slot("number"))
+#         dispatcher.utter_message("Thanks Now you can ask your question ....!")
 
-        return[]
+#         return[]
