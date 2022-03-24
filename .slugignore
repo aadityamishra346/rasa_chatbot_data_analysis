@@ -1,3 +1,0 @@
-*.env
-/rasa/__pycache__
-/rasa/env
