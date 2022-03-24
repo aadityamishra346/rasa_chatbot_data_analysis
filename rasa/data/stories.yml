@@ -1,0 +1,196 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy play video path
+  steps:
+    - intent: play_video
+    - action: action_video
+
+# custome question story
+
+- story: Data Analtics question answer
+  steps:
+  - intent: greet
+  - action: utter_greet
+- story: kmati1
+  steps:
+  - intent: become_data_analyst
+  - action: utter_become_data_analyst
+- story: kmati2
+  steps:
+  - intent: data_analyst_works
+  - action: utter_data_analyst_works
+- story: kmati3
+  steps:
+  - intent: data_profiling_Vs_data_mining
+  - action: utter_data_profiling_Vs_data_mining
+- story: kmati4
+  steps:
+  - intent: data_analysis_process
+  - action: utter_data_analysis_process
+- story: kmati5
+  steps:
+  - intent: data_cleansing
+  - action: utter_data_cleansing
+# - story: interactive_story_1
+#   steps:
+#   # - intent: data_analyst_works
+#   # - action: utter_become_data_analyst
+#   - intent: data_profiling_Vs_data_mining
+#   - action: utter_data_profiling_Vs_data_mining
+#   # - intent: data_cleansing
+#   # - action: utter_data_cleansing
+#   # - intent: data_analysis_process
+#   # - action: utter_data_analysis_process
+# #  Testing part 2
+# - story: kmati
+#   steps:
+
+
+- story: Data Analtics question answer2
+  steps:
+  - intent: techniques_used_by_data_analysts
+  - action: utter_techniques_used_by_data_analysts
+- story: kmati6
+  steps:
+  - intent: EDA_Exploratory_Data_Analysis
+  - action: utter_EDA_Exploratory_Data_Analysis
+  # - intent: techniques_used_by_data_analysts
+  # - action: utter_techniques_used_by_data_analysts
+- story: kmati7
+  steps:
+  - intent: data_analytics_in_IT_industry
+  - action: utter_data_analytics_in_IT_industry
+- story: kmati8
+  steps:
+  - intent: types_of_data_analytics
+  - action: utter_types_of_data_analytics
+- story: kmati9
+  steps:
+  - intent: tools_for_data_analysis
+  - action: utter_tools_for_data_analysis
+- story: kmati10
+  steps:
+  - intent: various_steps_involved_in_any_analytics
+  - action: utter_various_steps_involved_in_any_analytics
+- story: kmati11
+  steps:
+  - intent: data_validation_methods_used_by_data_analyst
+  - action: utter_data_validation_methods_used_by_data_analyst
+- story: kmati12
+  steps:
+  - intent: data_collectionPlan
+  - action: utter_data_collectionPlan
+- story: kmati13
+  steps:
+  - intent: data_visualization
+  - action: utter_data_visualization
+  # - intent: become_a_Data_Analyst
+  # - action: utter_become_a_Data_Analyst
+
+
+
+
+
+
+
+#  Add the data try3 
+- story: kmati14
+  steps:
+  - intent: exactly_data_analytics
+  - action: utter_exactly_data_analytics
+
+- story: kmati15
+  steps:
+  - intent: standard_KPIs
+  - action: utter_standard_KPIs
+
+- story: kmati16
+  steps:
+  - intent: data_come_from
+  - action: utter_data_come_from
+
+- story: kmati17
+  steps:
+  - intent: ensure_data_quality
+  - action: utter_ensure_data_quality
+
+- story: kmati18
+  steps:
+  - intent: statistical_analysis_techniques
+  - action: utter_statistical_analysis_techniques
+
+- story: kmati19
+  steps:
+  - intent: analysis_useful
+  - action: utter_analysis_useful
+
+- story: kmati20
+  steps:
+  - intent: improving_my_analysis_strategy
+  - action: utter_improving_my_analysis_strategy
+
+
+
+
+
+
+
+
+
+  # Rules trying to add in story file
+rules:
+- rule: Activate form
+  steps:
+  - intent: tell_name
+  - action: utter_name
+  - action: user_details_form
+  - active_loop: user_details_form
+
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: user_details_form
+  steps:
+  # Form is deactivated
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_submit
+  #  add the data in csv
+  - action: action_save_data
+
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope

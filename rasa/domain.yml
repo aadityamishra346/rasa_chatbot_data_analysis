@@ -1,0 +1,241 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- data_cleansing
+- data_analyst_works
+- data_profiling_Vs_data_mining
+- data_analysis_process
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- tell_name
+- play_video
+- out_of_scope
+- become_data_analyst
+#  Aad the intent
+# - EDA
+- techniques_used_by_data_analysts
+- EDA_Exploratory_Data_Analysis
+- data_analytics_in_IT_industry
+- types_of_data_analytics
+- tools_for_data_analysis
+- various_steps_involved_in_any_analytics
+- data_validation_methods_used_by_data_analyst
+- data_collectionPlan
+- data_visualization
+# - become_a_Data_Analyst -- duplicate
+
+
+# Add data try3
+
+- exactly_data_analytics
+- standard_KPIs
+- data_come_from
+- ensure_data_quality
+- statistical_analysis_techniques
+- analysis_useful
+- improving_my_analysis_strategy
+
+
+
+- my_name:
+    use_entities:
+    - name
+- mobile_number:
+    use_entities:
+    - number
+entities:
+- name
+- number
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  number:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: I am Kmati Bot Assistant.
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_number:
+  - text: What is your mobile number?
+  utter_thanks:
+  - text: Thanks for providing the values.
+  utter_details_thanks:
+  - text: |-
+      Thanks for providing the given details 
+      Name: {Name},
+      Mobile Number: {Mobile_number}
+
+  utter_become_data_analyst:
+  - text: '*Knowledge of Programming. *Knowledge of Data Analysis Tools. *Understanding of Statistics and Machine Learning Algorithms. *Knowledge of Data Visualization Tools.'
+  utter_data_analyst_works:
+  - text: Designing and maintaining data systems and databases; this includes fixing coding errors and other data-related problems. Mining data from primary and secondary sources, then reorganizing said data in a format that can be easily read by either human or machine.
+  utter_data_profiling_Vs_data_mining:
+  - text: Data mining mines actionable information while making use of sophisticated mathematical algorithms, whereas data profiling derives information about data quality to discover anomalies in the dataset.
+  utter_data_analysis_process:
+  - text: 'Data analysis generally refers to the process of assembling, cleaning, interpreting, transforming, and modeling data to gain insights or conclusions and generate reports to help businesses become more profitable. '
+  utter_data_cleansing:
+  - text: "Data cleaning, also known as data cleansing or data scrubbing or wrangling, is basically a process of identifying and then modifying, replacing, or deleting the incorrect, incomplete, inaccurate, irrelevant, or missing portions of the data as the need arises. This fundamental element of data science ensures data is correct, consistent, and usable."
+
+
+
+#  Testing part 2 Adding answe
+
+  utter_EDA_Exploratory_Data_Analysis:
+  - text: "Exploratory data analysis (EDA) helps to understand the data better.
+            *It helps you obtain confidence in your data to a point where you’re ready to engage a 
+              machine learning algorithm.*It allows you to refine your selection of feature variables that 
+              will be used later for model building."
+
+  utter_techniques_used_by_data_analysts:
+  - text: "There are majorly five types of sampling methods:
+              1.Simple random sampling
+              2.Systematic sampling
+              3.Cluster sampling
+              4.Stratified sampling
+              5.Judgmental or purposive sampling"
+
+  utter_data_analytics_in_IT_industry:
+  - text: "Data analytics is the science of analyzing raw data to make conclusions about that information. The techniques and processes of data analytics have been automated into mechanical processes and algorithms that work over raw data for human consumption. Data analytics help a business optimize its performance."
+
+
+  utter_types_of_data_analytics:
+  - text: "Predictive data analytics,Prescriptive data analytics,Diagnostic data analytics and Descriptive data analytics."
+
+  utter_tools_for_data_analysis:
+  - text: "Python,R,SAS,Excel,Power BI and Tableau are the top data analytics tools in today."
+
+  utter_various_steps_involved_in_any_analytics:
+  - text: "a)Collecting Data
+          b)Cleaning Data
+          c)Exploring and Analyzing Data
+          d)Interpreting the Results"
+
+  utter_data_validation_methods_used_by_data_analyst:
+  - text: "a) Data screening
+          b) Data verification"
+
+  utter_data_collectionPlan:
+  - text: "A data collection plan is used to collect all the critical data in a system. It covers :: a)Type of data that needs to be collected or gathered  b)Different data sources for analyzing a data set"
+
+
+  utter_data_visualization:
+  - text: "In simpler terms, data visualization is a graphical representation of information and data. It enables the users to view and analyze data in a smarter way and use technology to draw them into diagrams and charts."
+
+  # utter_become_a_Data_Analyst:
+  # - text: "Software Developers; Business Analysts; System/Database Administrators; Database Developers; Database Managers; Data Architects; Data Modelers; Report Writers; Consultants."
+
+#  Add the data try3
+
+  utter_exactly_data_analytics:
+  - text: "We can evaluate the well-being of your business first. Agree companywide on what KPIs are most 
+          relevant for your business and how do they already develop.Research different KPI examples and compare 
+          them to your own."
+
+
+  utter_standard_KPIs:
+  - text: "KPI stands for key performance indicator, a quantifiable measure of performance over time for a specific objective. KPIs provide targets for teams to shoot for, milestones to gauge progress, and 
+     insights that help people across the organization make better decisions."
+
+  utter_data_come_from:
+  - text: "The bulk of big data generated comes from three primary sources: social data, machine data 
+     and transactional data."
+
+  utter_ensure_data_quality:
+  - text: "Data quality a part of your data governance , define Quality Assurance (QA) metrics and perform regular QA audits. Appoint roles such as data owners, data stewards and data 
+      custodians within your organization and establish proper processes to ensure high data quality."
+
+
+  utter_statistical_analysis_techniques:
+  - text: "The statistical analysis has the following types that considerably depends upon data types-
+      1.Descriptive Statistical Analysis
+      2.Inferential Statistical Analysis
+      3.Predictive Analysis
+      4.Prescriptive Analysis
+      5.Exploratory Data Analysis (EDA)
+      6.Causal Analysis
+      7.Mechanistic Analysis"
+
+
+  utter_analysis_useful:
+  - text: "Data analysis is important in business to understand problems facing an organisation, and to explore data in meaningful ways."
+
+
+  utter_improving_my_analysis_strategy:
+  - text: "(a)-Play (the Right) Games eg: Puzzles, Scrabble, chess, and sudoku
+      (b)- Practice Your Observation Skills
+      (c)- Ask a Lot of Questions
+      (d)- Get Rid of the Calculator"
+
+
+
+
+#  when out of scope  fallback..
+  utter_out_of_scope:
+  - text: "Sorry, I didn't get what you said. Please rephrase what you said."
+
+
+
+
+
+
+actions:
+- action_save_data
+- action_submit
+- action_video
+- utter_become_data_analyst
+- utter_data_analysis_process
+- utter_data_cleansing
+- utter_data_profiling_Vs_data_mining
+#  Testing part 2 
+- utter_EDA
+- utter_techniques_used_by_data_analysts
+- utter_data_analytics_in_IT_industry
+- utter_types_of_data_analytics
+- utter_tools_for_data_analysis
+- utter_various_steps_involved_in_any_analytics
+- utter_data_validation_methods_used_by_data_analyst
+- utter_data_collection_plan
+- utter_data_visualization
+# - utter_become_a_Data_Analyst
+
+#  Add the data try3
+- utter_exactly_data_analytics
+- utter_standard_KPIs
+- utter_data_come_from
+- utter_ensure_data_quality
+- utter_statistical_analysis_techniques
+- utter_analysis_useful
+- utter_improving_my_analysis_strategy
+
+forms:
+  user_details_form:
+    required_slots:
+      name:
+      - type: from_text
+        entity: name
+      number:
+      - type: from_text
+        entity: number

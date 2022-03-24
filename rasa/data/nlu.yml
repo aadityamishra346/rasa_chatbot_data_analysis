@@ -1,0 +1,255 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: tell_name
+  examples: |
+    - what is your name?
+    - tell me your name
+    - what others call you
+    - what should i call you?
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: my_name
+  examples: |
+    - my name is [ashish](name)
+    - my name is [rahul](name)
+    - my name is [apneet](name)
+    - [ashish](name) is my name
+    - [ashish](name) this side
+    - people call me [ashish](name)
+- intent: mobile_number
+  examples: |
+    - my number is [8209829808](number)
+    - [8209829808](number)
+    - [8209829808](number) is my number
+    - my nobile number is [8209829808](number)
+- intent: play_video
+  examples: |
+    - play the mentioned video
+    - open the url
+    - open the link in browser
+    - show me the video that i asked for
+- intent: become_data_analyst
+  examples: |
+    - What are the key requirements for becoming a Data Analyst?
+    - Key requirement of become data analyst
+#  - what I should to know for data analyst ?
+- intent: data_analyst_works
+  examples: |
+    - What are the important responsibilities of a data analyst?
+    - responsibility of data analyst ?
+    - what data analyst works ?
+- intent: data_profiling_Vs_data_mining
+  examples: |
+    - what is the difference between data profiling and data mining?
+    - data profiling Vs data mining
+    - Diffrence between data profiling and data mining
+
+# @@@@@@@@@@
+- intent: data_analysis_process
+  examples: |
+    - What is the data analysis process?
+    - process of data analysis process?
+    - how data analsis work ?          
+# @@@@@ see above ambigous
+
+- intent: data_cleansing
+  examples: |
+    - Explain data cleansing?
+    - what is data cleansing?
+
+
+
+
+#  Testing part 2 ques Aading 
+
+- intent: EDA_Exploratory_Data_Analysis
+  examples: |
+    - What is the significance of Exploratory Data Analysis (EDA)?
+    - what is EDA ?
+    -  what is Exploratory Data Analysis ?
+
+- intent: techniques_used_by_data_analysts
+  examples: |
+    - What are the different types of sampling techniques used by data analysts?
+    - what is technique used by data analysts ?
+    -  what  we can use technique data analysts ?
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+- intent: data_analytics_in_IT_industry
+  examples: |
+    - what is data analytics in IT industry ?
+    - what is data analytics used in It ?
+    - what is role of data analytics in IT ?
+
+
+- intent: types_of_data_analytics
+  examples: |
+    - what are the types of data analytics?
+    - types of data analystics ?
+    - How many types of data analytics ?
+
+
+
+- intent: tools_for_data_analysis
+  examples: |
+    - which is best tools for data analysis ?
+    - tool for data Analytics 
+    - which is good tool for data analytics ?
+
+
+- intent: various_steps_involved_in_any_analytics
+  examples: |
+    - What are the various steps involved in any analytics project?
+    - various step involed in analytics ? 
+    - WHich step we used in analytics project ?
+
+- intent: data_validation_methods_used_by_data_analyst
+  examples: |
+    - what are the data validation methods used by data analyst ?
+    - data validation methods in data analysts  
+    - what is data validation in data analayst ?       
+#  @@@@@@@@@@@@@@
+
+- intent: data_collectionPlan
+  examples: |
+    - What is a data collection plan ?
+    - How we can collect the data in analytics ? 
+    - can you suggest me any plane for data collection ?
+
+
+
+- intent: data_visualization
+  examples: |
+    - What is data visualization?
+    - What is data visualization in data analytics ?
+    - what is the mena of data visualization ?
+
+
+
+# Add data try3 
+- intent: exactly_data_analytics
+  examples: |
+    - What exactly do you want to find out from data analytics?
+    - What is data analytics ?
+
+
+- intent: standard_KPIs
+  examples: |
+    - What standard KPIs will you use that can help ?
+    - What is standard KPIs we should use ?
+
+- intent: data_come_from
+  examples: |
+    - Where will your data come from ?
+    - From where data comes ?
+  
+
+- intent: ensure_data_quality
+  examples: |
+    - How can you ensure data quality ?
+    - How we say data is ensured ?
+
+- intent: statistical_analysis_techniques
+  examples: |
+    - Which statistical analysis techniques do you want to apply?
+    - Which statistical analysis techniques we should to use ?
+
+- intent: analysis_useful
+  examples: |
+    - How is analysis useful ?
+    - Why analysis is required ?
+
+- intent: improving_my_analysis_strategy
+  examples: |
+    - How can I keep improving my analysis strategy ?
+    - How can i improve analysis strategy ?
+
+
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
